@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://192.168.2.45:3306/mabang_dc_amazon?useUnicode=true"/>
+                <property name="username" value="schedul"/>
+                <property name="password" value="fBe9nIzs8+dj"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+<!--    <mappers>-->
+<!--        <mapper resource="hyc/mapper/MdcAmzExcelConfigMapper.xml"/>-->
+<!--    </mappers>-->
+
+    <mappers>
+        <!--  package指定dao接口所在包，mapper中可以不需要写全限定类名，就不用写resource和class了       -->
+        <package name="hyc.mapper" />
+    </mappers>
+</configuration>
